@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Universe ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:#fff1f5;
+ font-family:Poppins,sans-serif;
+ background:radial-gradient(ellipse at top,#482747,#191329 55%,#0c0b19);
+ overflow-x:hidden
+}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0}
+.star{position:absolute;background:white;border-radius:50%;animation:twinkle 3s infinite alternate}
+@keyframes twinkle{to{opacity:.2;transform:scale(.5)}}
+main,.opening{position:relative;z-index:1}
+.opening{
+ min-height:100svh;display:flex;align-items:center;
+ justify-content:center;text-align:center;padding:25px
+}
+.eyebrow{color:#f6d8a5;font-size:11px;letter-spacing:4px;text-transform:uppercase}
+h1,h2,h3,.letter{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400}
+h1{font-size:clamp(45px,10vw,75px);line-height:1.03;margin:22px 0}
+h2{font-size:clamp(37px,8vw,54px);line-height:1.1;margin:16px 0}
+.italic{color:#f6a9cb;font-style:italic}
+.sub{color:#cfc0d7;font-size:13px;line-height:2}
+.heart{
+ display:grid;place-items:center;margin:30px auto;
+ width:140px;height:140px;border:1px solid #f6a9cb66;
+ border-radius:50%;box-shadow:0 0 65px #f6a9cb22;
+ animation:glow 2s infinite alternate
+}
+.heart button{font-size:75px;color:#ffb7d5;background:none;border:0;cursor:pointer;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.13)}}
+@keyframes glow{to{box-shadow:0 0 80px #f6a9cb55}}
+button{font-family:inherit}
+.btn{
+ background:linear-gradient(135deg,#ffe2ed,#eea5c9);
+ color:#321b32;border:0;border-radius:40px;padding:14px 23px;
+ cursor:pointer;margin-top:18px
+}
+.hidden{display:none!important}
+section{padding:75px 20px}
+.content{max-width:680px;margin:auto;text-align:center}
+.divider{color:#f6a9cb;letter-spacing:9px;margin:30px}
+.letter{
+ text-align:left;max-width:600px;margin:30px auto;padding:30px;
+ border:1px solid #f6d8a533;border-radius:8px;
+ background:#ffffff08;font-size:21px;line-height:1.9
+}
+.signature{text-align:right;color:#f6a9cb;font-style:italic;font-size:25px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:30px}
+.card{
+ padding:23px 10px;min-height:155px;border-radius:18px;
+ border:1px solid #f6a9cb44;background:#ffffff08;color:#fff1f5;
+ cursor:pointer;transition:.25s
+}
+.card:hover{transform:translateY(-4px);background:#f6a9cb18}
+.card span{display:block;font-size:32px;margin-bottom:12px}
+.card strong{font-size:12px;font-weight:400}
+.card small{display:block;color:#cfc0d7;margin-top:9px;font-size:10px}
+.memory{text-align:left;border-left:1px solid #f6a9cb;padding-left:20px;margin:26px auto;max-width:450px}
+.memory h3{font-size:25px;margin:0}
+.memory p{color:#cfc0d7;font-size:13px;line-height:1.8}
+.promise{border:1px solid #f6d8a544;padding:35px 22px;border-radius:20px;background:#ffffff06}
+footer{text-align:center;color:#bcaacb;padding:35px 15px 50px;font-size:11px}
+.modal{
+ position:fixed;inset:0;z-index:5;background:#080610e8;
+ display:flex;align-items:center;justify-content:center;padding:20px
+}
+.modalbox{
+ max-width:430px;width:100%;padding:30px 24px;text-align:center;
+ background:linear-gradient(145deg,#432641,#191329);
+ border:1px solid #f6a9cb77;border-radius:22px
+}
+.modalbox p{font-size:14px;line-height:2;color:#fff0f6}
+.close{background:none;border:1px solid #f6a9cb88;color:white;padding:10px 18px;border-radius:30px;cursor:pointer}
+.float{position:fixed;bottom:-30px;pointer-events:none;z-index:4;animation:rise 4s forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:380px){.letter{padding:22px;font-size:18px}.card{padding:18px 6px}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<div class="opening" id="opening">
+ <div>
+  <div style="font-size:38px;margin-bottom:20px">☾</div>
+  <div class="eyebrow">A little surprise made with love</div>
+  <div class="heart"><button onclick="enter()" aria-label="Open">♥</button></div>
+  <h1>A Little World<br><span class="italic">Just for You</span></h1>
+  <p class="sub">Somewhere beneath these stars,<br>there's a little place made just for you.</p>
+  <button class="btn" onclick="enter()">Open your surprise ♡</button>
+ </div>
+</div>
+
+<main id="main" class="hidden">
+<section><div class="content">
+ <div class="eyebrow">For my favourite person</div>
+ <h2>Hey, my <span class="italic">love.</span></h2>
+ <p class="sub">I couldn't be beside you today.<br>So I made a little place where my feelings could find you.</p>
+ <div class="divider">✧ ♡ ✧</div>
+ <p class="sub">Take your time. There's no rush.<br>This little world is yours.</p>
+</div></section>
+
+<section><div class="content">
+ <div class="eyebrow">A letter from my heart</div>
+ <h2>Things I wish I could<br>tell you <span class="italic">in person.</span></h2>
+ <div class="letter">
+ Hey, my love. ❤️<br><br>
+ I know I can't always call you, send you gifts, or be beside you whenever I want to. Sometimes I wish I could do so much more for you.<br><br>
+ But today, I wanted to make something with my own effort, just for you. Something you could open whenever you have a quiet moment and need a reminder of how special you are to me.<br><br>
+ Out of all the people in this enormous world, somehow you became someone so important to my little world.<br><br>
+ You don't have to be happy every day. You don't have to find perfect words or pretend everything is okay. I hope you always feel you can be yourself with me.<br><br>
+ If I could ask for one simple thing right now, it would be to sit beside you, hear you talk about your day, laugh at the smallest things, and enjoy an ordinary moment together.<br><br>
+ Until I can do that, I hope this little corner makes the distance feel a little smaller.<br><br>
+ Thank you for being you. And thank you for being a part of my life. ❤️
+ <div class="signature">Yours, always ♡</div>
+ </div>
+</div></section>
+
+<section><div class="content">
+ <div class="eyebrow">Little things, just for you</div>
+ <h2>Open a little <span class="italic">surprise.</span></h2>
+ <p class="sub">Tap each heart. I left something for you inside.</p>
+ <div class="cards">
+  <button class="card" data-title="When you miss me" data-msg="Imagine me sitting beside you, smiling and listening to every little thing you want to say. I can't cross the distance this second, but I hope you can feel a little of my love through these words. Sending you the biggest virtual hug. 🫂">
+   <span>💌</span><strong>When you miss me</strong><small>A little virtual hug</small>
+  </button>
+  <button class="card" data-title="When you feel sad" data-msg="You don't have to hide your difficult days. You are allowed to be tired, quiet, uncertain, or sad. You don't have to earn love by smiling all the time. I hope tomorrow is kinder to you. Be gentle with yourself, okay? ❤️">
+   <span>🌷</span><strong>When you feel sad</strong><small>A note for your heart</small>
+  </button>
+  <button class="card" data-title="Five things I adore" data-msg="I adore the little things that make you uniquely you. I love our ordinary conversations. I appreciate the thoughts you share with me. I love imagining your smile. And I'm excited about all the things I still have to discover about you. 💗">
+   <span>💗</span><strong>Five things I adore</strong><small>And I could name more</small>
+  </button>
+  <button class="card" data-title="A wish for us" data-msg="I hope we get more ordinary days together. More silly conversations, more memories, more reasons to laugh. I hope we keep learning how to understand each other even when life gets difficult. One day at a time, let's keep making something beautiful. ✨">
+   <span>🌙</span><strong>A wish for us</strong><small>Something for our future</small>
+  </button>
+ </div>
+</div></section>
+
+<section><div class="content">
+ <div class="eyebrow">Our little universe</div>
+ <h2>Small things that<br>mean <span class="italic">so much.</span></h2>
+ <div class="memory"><h3>01. Little conversations</h3><p>Even a few ordinary words from you can become a highlight of my day.</p></div>
+ <div class="memory"><h3>02. Things you share</h3><p>I want to remember the little details you tell me, because they matter to me.</p></div>
+ <div class="memory"><h3>03. Memories still to come</h3><p>We still have so many things to learn about each other and so many moments to look forward to.</p></div>
+ <p class="sub">Later, replace these with real memories only you two share. ❤️</p>
+</div></section>
+
+<section><div class="content"><div class="promise">
+ <div style="font-size:42px">♡</div>
+ <div class="eyebrow">One last thing</div>
+ <h2>You are loved,<br><span class="italic">my favourite human.</span></h2>
+ <p class="sub">I may not be able to give you everything I wish I could right now. But I can keep showing up with honesty, care, patience, and little reminders that you matter to me.<br><br>Whenever life feels heavy, I hope you remember to be kind to yourself.</p>
+ <button class="btn" onclick="finalSurprise()">One more little surprise ♡</button>
+ <p id="final" class="sub hidden" style="color:#f6d8a5">If I could send you one thing through this screen, it would be the biggest hug, a little forehead kiss, and a reminder that I'm glad you're in my life. 🫂❤️</p>
+</div></div></section>
+<footer>Made with love, not money. ♡<br>A little world, created just for you.</footer>
+</main>
+
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true">
+ <div class="modalbox">
+  <div style="font-size:38px">♡</div>
+  <div class="eyebrow">A little message for you</div>
+  <h2 id="modalTitle"></h2>
+  <p id="modalMsg"></p>
+  <button class="close" onclick="closeModal()">Keep this in your heart ♡</button>
+ </div>
+</div>
+
+<script>
+for(let i=0;i<100;i++){
+ const s=document.createElement('span');
+ s.className='star';
+ const z=Math.random()*3+1;
+ s.style.width=z+'px';s.style.height=z+'px';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ s.style.opacity=Math.random();
+ s.style.animationDelay=Math.random()*4+'s';
+ document.getElementById('stars').appendChild(s);
+}
+
+function enter(){
+ document.getElementById('opening').classList.add('hidden');
+ document.getElementById('main').classList.remove('hidden');
+ window.scrollTo(0,0);
+ hearts();
+}
+
+function hearts(){
+ const symbols=['♡','♥','✧','💕'];
+ for(let i=0;i<16;i++){
+  setTimeout(()=>{
+   const h=document.createElement('span');
+   h.className='float';
+   h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+   h.style.left=Math.random()*100+'vw';
+   h.style.fontSize=(16+Math.random()*22)+'px';
+   h.style.color=Math.random()>.5?'#f6a9cb':'#f6d8a5';
+   document.body.appendChild(h);
+   setTimeout(()=>h.remove(),4100);
+  },i*100);
+ }
+}
+
+document.querySelectorAll('.card').forEach(card=>{
+ card.addEventListener('click',()=>{
+  document.getElementById('modalTitle').textContent=card.dataset.title;
+  document.getElementById('modalMsg').textContent=card.dataset.msg;
+  document.getElementById('modal').classList.remove('hidden');
+ });
+});
+
+function closeModal(){document.getElementById('modal').classList.add('hidden')}
+document.getElementById('modal').addEventListener('click',e=>{
+ if(e.target.id==='modal')closeModal();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+function finalSurprise(){
+ document.getElementById('final').classList.remove('hidden');
+ hearts();
+}
+</script>
+</body>
+</html>
